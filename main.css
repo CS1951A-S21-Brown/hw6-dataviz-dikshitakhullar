@@ -3,10 +3,27 @@
     margin-bottom: 20px;
 }
 
-.header > h3, h5 {
+.header > h3, h4, h5 {
     margin: 0;
     padding-top: 20px;
     text-align: center;
+}
+
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.tooltip-date, .tooltip-likes {
+    font-weight: bold;
 }
 
 /* Include any custom CSS styling here! */

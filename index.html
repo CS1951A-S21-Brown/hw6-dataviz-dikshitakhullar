@@ -3,6 +3,7 @@
 <head>
         <meta charset="utf-8">
         <title>Assignment 6 &laquo; Data Visualization Dashboard&raquo;</title>
+        <title>Netflix Movies and TV Shows </title>
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css"/>
         <!--Feel free to add more CSS files as needed-->
@@ -10,19 +11,68 @@
     </head>
 <body>
     <div class="header">
-        <h3>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h3>
+        <!--<h3>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h3>-->
+        <h3>Netflix Movies and TV Shows </h3>
+        <h5> Tracking the most popular cinema trends of all time on Netflix </h3>
     </div>
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+            <button type="button" class="btn btn-info" onclick="setBarData(0, 'listed_in')">Movie</button>
+            <button type="button" class="btn btn-info" onclick="setBarData(1, 'listed_in')">TV Show</button>
+            <div id="barplot"></div>
+            <hr>
+            <div id="linechart"></div><br/>
+            <p style="font-size: 11px;" style="text-indent: 5em;" >*This dataset contains very few (less than 20) movies per year from 1942 to 1996.
+                 Thus the average duration may not be an accurate represenation of those years. </p>
+
         </div>
+        <div class = "v1"></div>
         <div class="col-lg-6">
-            <div id="graph3"></div>
+            <div id="barplot_2"></div>
         </div>
     </div>
+    <hr>
+    <div class="header">    <h3> Written Questions </h3></div>
+    <ul>
+        <li> <b> Describe how your dashboard answers the questions presented. </b></li>
+        I use 2 types of graphs (Bar-chart and Line-chart)to answer the questions <br>
+        <u>Graph 1:</u> I used the bar chart to represent the number of titles per genre on Netflix. You can toggle between Movies and TV Shows. My y-axis shows the top genres of Movies or TV Shows and my x-axis shows the count. 
+        <br> <u>Graph 2:</u> I used the line chart to represent the average duration of movies over the years. My y-axis shows the average duration of movies in minutes and my X-axis shows the year the movies were realeased. Using a tooltip, you can see the exact avg duration per year on the graph. 
+        <br> <u>Graph 3:</u> I used the bar chart to represent the top director and actor pairs that have worked together. My y-axis shows the top 20 pairs  and my x-axis shows the number of times they have worked together. <br>
+        <br> <li> <b>3 reasons why D3 was helpful and improved my visualization: </b></li>
+            <ol>
+                <li>D3 allows us to present data in various ways. I was able to easily represent my data using its tools. </li>
+                <li>It has lots of custom capabilities as well. I was able to change my font, color of bars, style my graphs in any way that I wanted.</li>
+                <li>I was able to easily add interactive components like buttons and tooltips using d3. It allows animations. Interactivity and customization of even the smallest element. </li>
+            </ol>
+        <br> <li> <b> 3 reasons why D3 would not be the best tool for creating a visualization: </b></li>
+            <ol>
+                <li>D3 requires web prior development experience. Thus, it could have a high learning curve. </li>
+                <li>Programming in D3 is always done from scratch. So, it can be a little complicated at times. </li>
+                <li>Complicated visualizations demand plenty of work on the logic, data formatting, and the layout. Also, dealing with a lot of data could get tough at times as well. </li>
+            </ol> <br>
+        <li><b> Evaluate the accessibility of your dashboard based on the readings in the “Before you begin” section. What kinds of users might find this dashboard accessible and who might have more difficulty? What additional actions might you take to make this dashboard more accessible to all audiences? </b></li>
+        Taking points from the reading, I have tried to make my dashboard accessible. I chose the color blue as it is visible to color blind people. I increased the thickness of my line chart, so that it is more visible and also the font size. I used well descriptive titles, placed my axis labels at the right
+        positions and used ticks. <br>
+
+        My dashboard is accessible to people with epilepsy, ADHD, cognitive disabilities and color blind users and deaf users. On the other hand, my dashboard is not accessible to blind users or popes with visual disability as I have not included alt text to describe the graphs. 
+        
+        <br>To make my dashboard more accessible, I have used Alt text to make my dashboard more accessible, added the Netflix csv and made it available to my readers. I could also have added sonification to cater to blind users. <br>
+        <br><li><b>Reflect on the stages of your design and implementation process when you could have taken steps to make your dashboard more accessible to all audiences. What are some factors that kept you from taking these steps? (a few sentences)</b> </li>
+        First I implemented the bar graph which gets the genres and the count, then I moved to the line chart and lastly I made my bar chart. I was going to make a graph with nodes as directors and actors for the last graph but it got too complicated so I ended up making it a bar chart. I could have used better
+        colors to ease color blind users even more by using contrasting colors. I could also have added alt text to help users with visual disabilities, however I did not get the time to do so. The only factor that prevented me from doing so was time. 
+    </ul>
+
     <!--Feel free to add more JavaScript files as needed-->
+    <script type="text/javascript" > 
+    const NUM_EXAMPLES = 15;
+    </script>
+
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="barplot.js"></script>
+    <script type="text/javascript" src="linechart.js"></script>
+    <script type="text/javascript" src="barplot_2.js"></script>
+
 </body>
 </html>

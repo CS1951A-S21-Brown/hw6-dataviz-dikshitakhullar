@@ -8,3 +8,21 @@ let graph_1_width = (MAX_WIDTH / 2) - 10, graph_1_height = 250;
 let graph_2_width = (MAX_WIDTH / 2) - 10, graph_2_height = 275;
 let graph_3_width = MAX_WIDTH / 2, graph_3_height = 575;
 
+let data;
+
+// Load data from netflix.csv file
+
+function loadData() {
+    let dataa;
+   d3.csv("../data/netflix.csv").then(function(d) {
+        data = d;
+        return d;
+        //console.log(data);
+    });
+}
+
+
+
+
+
+
