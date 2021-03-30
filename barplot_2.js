@@ -21,7 +21,7 @@ let bar2_y = d3.scaleBand()
 
 // Add y-axis label
 let y_axis_label = svg_barplot2.append("text")
-    .attr("transform",`translate(${-65}, ${-1})` )
+    .attr("transform",`translate(${-70}, ${-5})` )
     .style("text-anchor", "middle")
     .text("Director-Actor Pairs");
 

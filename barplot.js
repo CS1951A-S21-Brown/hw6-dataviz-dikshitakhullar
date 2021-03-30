@@ -123,7 +123,7 @@ function use(attr,cleaned_data) {
 //Add x-axis label
 svg_barplot.append("text")
     .attr("transform",
-        `translate(${(barplot_width - margin.left - margin.right)},
+        `translate(${(barplot_width - margin.left - margin.right)/1.5},
         ${(barplot_height - margin.top - margin.bottom)})`)
     .style("text-anchor", "middle")
     .text("Number of Movies per Genre");

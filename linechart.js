@@ -39,9 +39,9 @@ svg_line.append("text")
 // Add y-axis label
 svg_line.append("text")
     .attr("transform",
-        `translate(-60, ${(line_height - margin.top - margin.bottom) / 2})`)
+        `translate(-100, ${(line_height - margin.top - margin.bottom) / 2})`)
     .style("text-anchor", "middle")
-    .text("Avg Duration");
+    .text("Avg Duration (mins)");
 
 function setLineData() {
     let year_map = {};
